@@ -8,11 +8,13 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 1.6 rem;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -57,10 +59,12 @@ a {
 
 /* Header */
 .pre-header {
+    display: flex;
+    align-items: center;
     position: relative;
     background-color: #e6f0ff;
-    height: 100vh;
-    max-height: 900px;
+    height: calc(100vh - 94px);
+    max-height: 810px;
 }
 
 .navbar {
@@ -116,6 +120,7 @@ a {
 
 .hero .info {
     width: 51%;
+    margin-bottom: 90px;
 }
 
 .hero .title {
