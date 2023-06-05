@@ -164,6 +164,17 @@ a {
     justify-content: space-between;
 }
 
+.client-logo a {
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.client-logo a:hover {
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(20, 39, 255, 0.1);
+}
+
 /* Guide */
 .guides {
     margin-top: 200px;
@@ -366,6 +377,10 @@ h2 {
     overflow: hidden;
 }
 
+.list h4 a:hover {
+    color: #0689ff;
+}
+
 .feature .body .desc {
     margin-bottom: 20px;
     margin-top: 10px;
@@ -515,9 +530,10 @@ h2 {
 
 .stats .info .desc {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #a7a7a7;
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    color: #5a6473;
 }
 
 .stats .row-stats {
@@ -603,6 +619,10 @@ h2 {
     font-weight: 400;
     font-size: 1.6rem;
     color: #7a7a7e;
+}
+
+.footer .row .item a:hover {
+    color: #000336;
 }
 
 .footer .row {
