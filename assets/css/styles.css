@@ -45,8 +45,18 @@ a {
     color: #0f1b4c;
 }
 
+/* fixed header */
+
+.fixed-header {
+    background-color: #e6f0ff;
+    padding-top: 20px;
+    position: sticky;
+    top: -20px;
+    z-index: 1;
+}
+
 /* Header */
-.header {
+.pre-header {
     position: relative;
     background-color: #e6f0ff;
     height: 100vh;
@@ -56,9 +66,10 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
     right: 65px;
     bottom: 0;
+    background-color: #e6f0ff;
+    padding: 25px 0;
 }
 
 .navbar ul {
@@ -99,9 +110,8 @@ a {
 }
 
 /* HERO */
-
 .hero {
-    margin-top: 130px;
+    padding-top: 130px;
 }
 
 .hero .info {
