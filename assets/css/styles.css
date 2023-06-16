@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    font-size: 1.6 rem;
+    font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
 }
@@ -25,14 +25,13 @@ a {
 
 .content {
     width: 1110px;
-    max-width: calc(100% -48px);
-    margin: auto;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .btn {
-    /* min-width: 98px; */
-    /* boi vi day dang la the a inline nen phai them display inline block minwisth moi hoat dong */
-    /* display: inline-block; */
     text-align: center;
     font-weight: 500;
     font-size: 1.4rem;
@@ -50,10 +49,10 @@ a {
 /* fixed header */
 
 .fixed-header {
-    background-color: #e6f0ff;
+    background: #e6f0ff;
     padding-top: 20px;
     position: sticky;
-    top: -20px;
+    /* top: -20px; */
     z-index: 1;
 }
 
@@ -64,7 +63,7 @@ a {
     position: relative;
     background-color: #e6f0ff;
     height: calc(100vh - 94px);
-    max-height: 810px;
+    max-height: 1200px;
 }
 
 .navbar {
@@ -115,7 +114,7 @@ a {
 
 /* HERO */
 .hero {
-    padding-top: 130px;
+    /* padding-top: 130px; */
 }
 
 .hero .info {
@@ -180,10 +179,20 @@ a {
 }
 
 .client-logo a {
-    padding: 30px;
+    --height: 30px;
+    padding: var(--height);
     border-radius: 12px;
+    width: calc((100% - var(--height) * 4) / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.client-logo img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .client-logo a:hover {
     padding: 30px;
     border-radius: 12px;
@@ -252,7 +261,7 @@ a {
 .guide-item h4 {
     font-weight: 500;
     font-size: 2rem;
-    line-height: 1.1px;
+    line-height: 1.1;
     text-align: center;
     color: #3b3c45;
     margin-top: 26px;
@@ -280,62 +289,10 @@ a {
 
 /* feature */
 
-/* .feature {
-    margin-top: 230px;
-    margin-bottom: 50px;
-}
-.feature .sub-title {
-    font-weight: 600;
-    font-size: 3.5rem;
-    color: #000339;
-    margin-bottom: 20px;
-}
-
-.feature p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: #5a6473;
-}
-
-.feature .description {
-    display: flex;
-    justify-content: space-between;
-}
-
-.link-description {
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 1.5rem;
-    color: #0689ff;
-}
-.feature-item .list-item {
-    max-width: 33.33%;
-}
-.feature-item h4 {
-    font-weight: 600;
-    font-size: 2rem;
-    color: #000339;
-}
-
-.feature-item .text-feature-item p {
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.5px;
-    color: #a3a6ab;
-    margin-top: 15px;
-}
-
-.feature-icon-list {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-} */
-
 .feature {
     background: #f5fafe;
     padding-top: 110px;
     padding-bottom: 120px;
-    padding-left: 110px;
 }
 h2 {
     font-weight: 600;
@@ -365,17 +322,23 @@ h2 {
 .feature .link {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .feature .link .arrow {
-    margin-top: 20px;
-    margin-left: 8px;
+    margin-left: 10px;
 }
 
 .feature .list {
     margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
 }
-
+.feature .item {
+    width: 350px;
+}
 .feature .item .thumb {
     width: 350px;
     height: 227px;
@@ -423,12 +386,6 @@ h2 {
     align-items: center;
 }
 
-.feature .content .list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
 .feature .item .body {
     flex: 1;
     margin: 17px 20px 20px 24px;
@@ -437,6 +394,7 @@ h2 {
 .feature .content .item {
     background-color: #fff;
     border-radius: 12px;
+    overflow: hidden;
 }
 
 /* stats */
@@ -465,11 +423,6 @@ h2 {
     width: 240px;
     border-radius: 0 0 12px 12px;
 }
-
-/* .stat-trend .row {
-    display: flex;
-    justify-content: space-between;
-} */
 
 .stat-trend .icon {
     margin-left: auto;
@@ -511,10 +464,11 @@ h2 {
     margin-left: auto;
     border-radius: 12px;
 }
-
 .stats .info {
-    padding-top: 129px;
-    padding-left: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 129px;
 }
 
 .stats .info .desc {
@@ -557,11 +511,16 @@ h2 {
     margin-top: 110px;
 }
 
+.data-stats {
+    width: calc((100% - 20px) / 3);
+}
 .row-stats strong {
     font-weight: 600;
     font-size: 6.4rem;
     color: #000000;
     margin-bottom: 22px;
+    display: block;
+    text-align: center;
 }
 
 .row-stats p {
@@ -585,18 +544,17 @@ h2 {
     display: flex;
     align-items: center;
     position: relative;
+    padding: 0 80px 0 80px;
 }
 
 .subscription .sub-title {
     color: #fff;
-    margin-left: 80px;
     line-height: 1.5;
     width: 670px;
 }
 
 .subscription .desc {
     width: 670px;
-    margin-left: 80px;
     margin-bottom: 40px;
     font-weight: 400;
     font-size: 1.6rem;
@@ -606,7 +564,6 @@ h2 {
 }
 
 .subscription .btn {
-    margin-left: 80px;
     background-color: #fff;
     color: #063183;
 }
